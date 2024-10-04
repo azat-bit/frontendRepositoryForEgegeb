@@ -1,0 +1,63 @@
+.wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun olarak ayarlandı */
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+/* Kutular için genel stil */
+.wrapper > div {
+    border: 2px solid rgb(233 171 88);
+    border-radius: 5px;
+    background-color: rgba(233, 171, 88, 0.5);
+    padding: 1em;
+    color: #d9480f;
+}
+
+/* Birinci satırda iki büyük kare */
+.one {
+    grid-column: 1 / 2; /* Sol üst büyük kare */
+    grid-row: 1 / 3;
+}
+
+.two {
+    grid-column: 3 / 4; /* Sağ üst büyük kare */
+    grid-row: 1 / 3;
+}
+
+/* Ortada üst üste iki küçük kutu */
+.three {
+    grid-column: 2 / 3;
+    grid-row: 1;
+}
+
+.four {
+    grid-column: 2 / 3;
+    grid-row: 2;
+}
+/* İkinci satırın sağ tarafında büyük kutu */
+.five {
+    grid-column: 3 / 4; /* Sağ üst büyük kare (ikinci satır için) */
+    grid-row: 3 / 5; /* İkinci ve üçüncü satırları kaplar */
+}
+.six {
+  grid-column: 1 / 1; /* İlk sütunu kaplayacak */
+  grid-row: 3; /* Üçüncü satırda yer alacak */
+  width: auto; /* "six" kutusu daralacak */
+}
+.seven {
+  grid-column: 2/ 3; /* İkinci sütunu kaplayacak */
+  grid-row: 3; /* Aynı satırda (üçüncü satır) yer alacak */
+}
+/* Üçüncü satırda geniş "eight" ve hizalı "nine" kutuları */
+.eight {
+    grid-column: 1 / 1; /* İki sütun genişliğinde */
+    grid-row: 4;
+}
+
+.nine {
+    grid-column: 2 / 3; /* Yan yana hizalanacak şekilde ayarlandı */
+    grid-row: 4;
+}
